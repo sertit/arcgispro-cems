@@ -19,7 +19,7 @@ Now you will need to configure ArcGIS Pro to use this new Conda environment.
 
 1. Launch ArcGIS Pro
 2. Go to `Project > Package Manager` and then in the upper right corner, select `ArcGIS Pro-cems` 
-   ![ArcGIS Pro](_static/ArcGIS Pro.png)
+   ![ArcGIS Pro](_static/arcgispro.png)
 3. Press OK. Eventually, activate this environment, press OK and restart ArcGIS Pro.
 
 # How to update ArcGIS Pro conda environment
