@@ -1,4 +1,4 @@
-> ⚠⚠ You need ArgiPro 3.0 to use this environment!
+> ⚠ You need ArgiPro 3.0 to use this environment!
 
 # How to set up ArcGis Pro conda environment
 
@@ -61,7 +61,12 @@ A lot of logs about `Windows fatal exception: code 0xe0000001` may be displayed,
 See https://github.com/pyproj4/pyproj/issues/770 
 TLDR: 
 - Install the [Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019.](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170)
-- Update pyproj afterwards: `conda activate arcgispro-cems` `conda update pyproj`
+- In your Anaconda Powershell Prompt:  
+  - `conda activate arcgispro-cems`
+  - `conda update pyproj`
 
 ### `from lxml import etree ImportError: DLL load failed: Le module spécifié est introuvable.`
-Just do in your Anaconda Powershell Prompt with `arcgispro-cems` activated: `pip uninstall lxml -y` and `pip install lxml`
+In your Anaconda Powershell Prompt:  
+  - `conda activate arcgispro-cems`
+- `pip uninstall lxml -y`
+- `pip install lxml`
