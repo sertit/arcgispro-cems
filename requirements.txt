@@ -1,0 +1,20 @@
+# Tests & lint
+pre-commit
+black
+pytest
+coverage
+pytest-cov
+flake8
+pylint
+tempenv
+
+# Stats
+rasterstats
+
+# SERTIT libs
+sertit>=1.19.1
+eoreader>=0.17.0
+
+# Add hereunder other libs that don't directly rely on GDAL
+# (to speed up environment solving and allow installing libs not available on conda-forge), i.e.
+# osmnx, pysheds, pyodbc, rio-cogeo, sentineleof...
