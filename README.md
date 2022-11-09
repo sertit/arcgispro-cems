@@ -1,21 +1,26 @@
-> ⚠⚠⚠ You need ArgiPro 3.0 to use this environment!
+> ⚠⚠ You need ArgiPro 3.0 to use this environment!
 
 # How to set up ArcGis Pro conda environment
 
 1. If not done already please install [Anaconda](https://docs.anaconda.com/anaconda/install/) and [Git Bash](https://gitforwindows.org/)
 2. First launch Anaconda Powershell prompt **as an administrator** (right click on it)
-3. Go to a folder of your choice (`cd ...`, to change disk, type `d:` or `e:`). It would be best to clone it in a folder containing other CEMS tools such as `WaterDepthDEM`
+3. Go to a folder of your choice (`cd ...`, to change disk, type `d:` or `e:`). It would be best to clone it in a folder containing other CEMS tools such as `WaterDepthDEM`  
+   ![git_clone](_static/git_clone.png)
 4. Clone this project `git clone https://github.com/sertit/argispro-cems` and `cd argispro-cems`
-5. Update conda `conda update -n base conda`
-6. Create this environment `conda env create -f environment.yml`
+5. Update conda `conda update -n base conda`  
+   ![update_conda](_static/update_conda.png)
+6. Create this environment `conda env create -f environment.yml` (this may take a while)   
+   ![create_env](_static/create_env.png)
+7. You should have this message if everything is successful:  
+   ![env_success](_static/env_success.png)
 
 # Add the environment to ArcgisPro
 Now you will need to configure ArcGIS Pro to use this new Conda environment. 
 
-1. First get the path of the new `arcgispro-cems` environment. To do so run `conda env list` and copy the path of the `arcgispro-cems` environment
-2. Now launch ArcGIS Pro
-3. Go to `Project > Package Manager` and then in the upper right corner, select `arcgispro-cems`
-4. Press OK. Eventually, activate this environment, press OK and restart ArcGIS Pro.
+1. Launch ArcGIS Pro
+2. Go to `Project > Package Manager` and then in the upper right corner, select `arcgispro-cems` 
+   ![arcgispro](_static/arcgispro.png)
+3. Press OK. Eventually, activate this environment, press OK and restart ArcGIS Pro.
 
 # How to update ArcGis Pro conda environment
 
@@ -40,6 +45,15 @@ There are two possible scenarios :
 5. Update conda `conda update -n base conda`
 6. Delete the conda environment `conda env remove -n arcgispro-cems`
 
+## Tests to do in order to check if everything is alright
+
+Just double-click on the `test_env_update.bat` file.  
+![test_bat](_static/test_bat.png)  
+![tests_success](_static/tests_success.png)  
+A lot of logs about `Windows fatal exception: code 0xe0000001` may be displayed, but this isn't a problem as long as the tests finish as `passed`
+
+> ⚠ Note: the tool will try to run the `WaterDepthDEM` tests and will succeed if the tool folder is next to `arcgispro-cems`
+
 ## Known errors
 
 ### `ImportError: DLL load failed while importing _network`
@@ -51,11 +65,3 @@ TLDR:
 
 ### `from lxml import etree ImportError: DLL load failed: Le module spécifié est introuvable.`
 Just do in your Anaconda Powershell Prompt with `arcgispro-cems` activated: `pip uninstall lxml -y` and `pip install lxml`
-
-
-## Tests to do in order to check if everything is alright
-
-Just double-click on the `test_env_update.bat` file.
-A lot of logs about `Windows fatal exception: code 0xe0000001` may be displayed, but this isn't a problem as long as the tests finish as `passed`
-
-Note: the tool will try to run the `WaterDepthDEM` tests and will succeed if the tool folder is next to `arcgispro-cems`
