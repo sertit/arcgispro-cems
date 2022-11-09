@@ -18,7 +18,7 @@
 Now you will need to configure ArcGIS Pro to use this new Conda environment. 
 
 1. Launch ArcGIS Pro
-2. Go to `Project > Package Manager` and then in the upper right corner, select `ArcGIS Pro-cems` 
+2. Go to `Project > Package Manager` and then in the upper right corner, select `argispro-cems` 
    ![ArcGIS Pro](_static/arcgispro.png)
 3. Press OK. Eventually, activate this environment, press OK and restart ArcGIS Pro.
 
@@ -43,7 +43,7 @@ There are two possible scenarios :
 3. To be sure, pull the last environment version: `git pull`
 4. Open an Anaconda Powershell as **administrator**
 5. Update conda `conda update -n base conda`
-6. Delete the conda environment `conda env remove -n ArcGIS Pro-cems`
+6. Delete the conda environment `conda env remove -n argispro-cems`
 
 ## Tests to do in order to check if everything is alright
 
@@ -52,7 +52,7 @@ Just double-click on the `test_env_update.bat` file.
 ![tests_success](_static/tests_success.png)  
 A lot of logs about `Windows fatal exception: code 0xe0000001` may be displayed, but this isn't a problem as long as the tests finish as `passed`
 
-> ⚠ Note: the tool will try to run the `WaterDepthDEM` tests and will succeed if the tool folder is next to `ArcGIS Pro-cems`
+> ⚠ Note: the tool will try to run the `WaterDepthDEM` tests and will succeed if the tool folder is next to `argispro-cems`
 
 ## Known errors
 
@@ -62,11 +62,11 @@ See https://github.com/pyproj4/pyproj/issues/770
 TLDR: 
 - Install the [Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019.](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170)
 - In your Anaconda Powershell Prompt:  
-  - `conda activate ArcGIS Pro-cems`
+  - `conda activate argispro-cems`
   - `conda update pyproj -c conda-forge`
 
 ### `from lxml import etree ImportError: DLL load failed: Le module spécifié est introuvable.`
 In your Anaconda Powershell Prompt:  
-  - `conda activate ArcGIS Pro-cems`
+  - `conda activate argispro-cems`
 - `pip uninstall lxml -y`
 - `pip install lxml`
