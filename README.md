@@ -2,8 +2,8 @@
 
 # How to set up ArcGIS Pro conda environment
 
-1. If not done already please install [Anaconda](https://docs.anaconda.com/anaconda/install/) and [Git Bash](https://gitforwindows.org/)
-2. First launch Anaconda Powershell prompt **as an administrator** (right click on it)
+1. If not done already please install [Anaconda](https://docs.anaconda.com/anaconda/install/) (just for you) and [Git Bash](https://gitforwindows.org/)
+2. First launch Anaconda Powershell prompt
 3. Go to a folder of your choice (`cd ...`, to change disk, type `d:` or `e:`). It would be best to clone it in a folder containing other CEMS tools such as `WaterDepthDEM`  
    ![git_clone](_static/git_clone.png)
 4. Clone this project `git clone https://github.com/sertit/argispro-cems` and `cd argispro-cems`
@@ -32,7 +32,7 @@ There are two possible scenarios :
 
 1. Go to the folder (`cd ...`) where this project `git clone https://github.com/sertit/argispro-cems` was cloned
 2. To be sure, pull the last environment version: `git pull`
-3. Open an Anaconda Powershell as **administrator**
+3. Open an Anaconda Powershell
 4. Update conda `conda update -n base conda`
 5. Update this environment with the specified wheels `conda env update -f environment.yml`
 
@@ -41,7 +41,7 @@ There are two possible scenarios :
 1. Update to a new version of ArcGIS Pro
 2. Go to the folder (`cd ...`) where this project `git clone https://github.com/sertit/argispro-cems` was cloned
 3. To be sure, pull the last environment version: `git pull`
-4. Open an Anaconda Powershell as **administrator**
+4. Open an Anaconda Powershell
 5. Update conda `conda update -n base conda`
 6. Delete the conda environment `conda env remove -n argispro-cems`
 
