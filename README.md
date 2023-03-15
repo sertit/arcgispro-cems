@@ -3,8 +3,9 @@
 # How to set up ArcGIS Pro conda environment
 
 1. If not done already please install [Anaconda](https://docs.anaconda.com/anaconda/install/) (just for you) and [Git Bash](https://gitforwindows.org/)
-2. First launch Anaconda Powershell prompt
-3. Go to a folder of your choice (`cd ...`, to change disk, type `d:` or `e:`). It would be best to clone it in a folder containing other CEMS tools such as `WaterDepthDEM`  
+2. If possible, use `libmamba`: do `conda update --all` and then follow the instructions [here](https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community). Using mamba may help you solve the environment and avoid som bugs.
+4. First launch Anaconda Powershell prompt
+5. Go to a folder of your choice (`cd ...`, to change disk, type `d:` or `e:`). It would be best to clone it in a folder containing other CEMS tools such as `WaterDepthDEM`  
    ![git_clone](_static/git_clone.png)
 4. Clone this project `git clone https://github.com/sertit/argispro-cems` and `cd argispro-cems`
 5. Update conda `conda update -n base conda`  
